@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #fbf9f9;
+}
+
+.maze {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#settings {
+  position: absolute;
+  padding: 1.5rem;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border: 1px solid #4285F4;
+  border-radius: 10px;
+  background-color: #4285F4;
+  font-size: 0.8rem;
+  z-index: 2;
+}
+
+input {
+    margin-bottom: 1rem;
+    background-color: #4285F4;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    margin-top: 0.2rem;
+    outline: none;
+    padding: 10px 25px;
+}
+
+#submit {
+  background-color: #ffffff;
+  border: 1px solid #e1e8f3;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #4285F4;
+  box-shadow: 0px 2px 2px 1px black;
+  padding: 10px 25px;
+}
+
+#submit:hover {
+  opacity: 0.7;
+}
+
+.complete {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 30%;
+  background: #000000;
+  z-index: 4;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+.heading-game{
+  text-align: center;
+  .title {
+    color: #000000;
+    font-family: "Bungee Inline", cursive; 
+    padding-top: 60px;
+    position: relative;
+    display: inline-block;
+    &::before{
+      content: '';
+      width: 0;
+      height: 4px;
+      position: absolute;
+      background-color: #000000;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all linear .3s;
+    }
+
+    &:hover::before{
+      width: calc(100% / 2);
+      opacity: 1;
+    }
+  }
+}
+
